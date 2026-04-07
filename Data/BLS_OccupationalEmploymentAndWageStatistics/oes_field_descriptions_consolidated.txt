@@ -1,0 +1,334 @@
+================================================================================
+BLS OCCUPATIONAL EMPLOYMENT STATISTICS (OES) SURVEY
+CONSOLIDATED FIELD DESCRIPTIONS — May 2003 through May 2017
+================================================================================
+Source: Bureau of Labor Statistics, U.S. Department of Labor
+        www.bls.gov/oes
+        Phone: 202-691-6569
+
+Note: Not all fields are present in every estimates file. File availability
+varies by year, geography level, and industry level. See individual field
+notes for details on which files include each field.
+
+This document covers 15 annual releases: 2003–2017.
+It consolidates all field definitions and documents changes across years.
+
+================================================================================
+SECTION 1: FIELD REFERENCE (CURRENT DEFINITIONS)
+================================================================================
+Definitions below reflect the most recent (2017) wording unless noted.
+Year-over-year variations are documented in Section 2.
+
+--------------------------------------------------------------------------------
+GEOGRAPHY / AREA IDENTIFIER FIELDS
+--------------------------------------------------------------------------------
+
+prim_state
+  Primary state for the MSA. Present only on MSA and nonmetropolitan area files.
+
+area
+  Geographic area code. Contains the MSA code, metropolitan division code,
+  state FIPS code, or OES-specific nonmetropolitan area code depending on
+  the file type.
+
+st
+  State abbreviation. Present only on the state-level file.
+
+state
+  State name. Present only on the state-level file.
+
+area_name
+  Area name. Present only on metropolitan and nonmetropolitan area files.
+
+--------------------------------------------------------------------------------
+INDUSTRY IDENTIFIER FIELDS
+--------------------------------------------------------------------------------
+
+naics
+  North American Industry Classification System (NAICS) code for the
+  given industry. Present only on the national industry files.
+
+naics_title
+  North American Industry Classification System (NAICS) title for the
+  given industry. Present only on the national industry files.
+
+naics_level  [PRESENT: 2012–2013 only]
+  Distinguishes between 5-digit NAICS and 6-digit NAICS. Present only on
+  the select 5- and 6-digit industry file.
+
+ownership  [ADDED: 2010]
+  Ownership type (e.g., private, federal, state, local government). Present
+  only on the industry and ownership-level files. Files without an ownership
+  field represent private, federal, state, and local government ownerships
+  combined.
+
+--------------------------------------------------------------------------------
+OCCUPATION IDENTIFIER FIELDS
+--------------------------------------------------------------------------------
+
+occ_code
+  Standard Occupational Classification (SOC) code, or OES-specific code,
+  for the occupation.
+  NOTE: Described as 7-digit in 2003–2014; changed to 6-digit in 2015–2017
+  (reflecting the 2010 SOC revision).
+
+occ_title
+  Standard Occupational Classification title or OES-specific title for
+  the occupation.
+
+group  [PRESENT: 2003–2011; replaced by occ_group starting 2012]
+  Occupation grouping indicator. In 2003–2010: contains "major" if this is
+  a SOC major group occupation; otherwise blank. In 2011: also contains
+  "total" for cross-occupational industry or area totals.
+
+occ_group  [ADDED: 2012; replaces group]
+  Shows the SOC occupation level:
+    "total"    = Total of all occupations
+    "major"    = SOC major group
+    "minor"    = SOC minor group
+    "broad"    = SOC broad occupation
+    "detailed" = SOC detailed occupation
+
+--------------------------------------------------------------------------------
+EMPLOYMENT FIELDS
+--------------------------------------------------------------------------------
+
+tot_emp
+  Estimated total employment rounded to the nearest 10. Excludes
+  self-employed workers.
+
+emp_prse
+  Percent relative standard error (RSE) for the employment estimate.
+  RSE is a measure of reliability; smaller values indicate more precise
+  estimates.
+
+pct_total
+  Percent of industry employment in the given occupation. Present only on
+  the national industry files. Percents may not total to 100 due to
+  occupational data not published separately (described as "not reported"
+  in earlier years).
+
+pct_rpt
+  Percent of establishments reporting the given occupation in the given
+  industry. Present only on the national industry files.
+
+jobs_1000  [ADDED: 2009]
+  Number of jobs (employment) in the given occupation per 1,000 jobs in
+  the given area. Present only on the statewide, metropolitan, and
+  nonmetropolitan statistical area files.
+
+loc quotient / loc_quotient  [ADDED: 2010]
+  Location quotient. Represents the ratio of an occupation's share of
+  employment in a given area to that occupation's share of employment in
+  the U.S. as a whole. For example, an occupation making up 10 percent of
+  employment in a specific metropolitan area compared with 2 percent of
+  U.S. employment would have a location quotient of 5.
+  Present only on the state, metropolitan, and nonmetropolitan statistical
+  area files.
+  NOTE: Column name changed from "loc quotient" (with space) to
+  "loc_quotient" (with underscore) starting in 2015.
+
+--------------------------------------------------------------------------------
+WAGE FIELDS
+--------------------------------------------------------------------------------
+
+h_mean
+  Mean hourly wage.
+
+a_mean
+  Mean annual wage.
+
+mean_prse
+  Percent relative standard error (RSE) for the mean wage. RSE is a
+  measure of reliability; smaller values indicate more precise estimates.
+
+h_pct10
+  Hourly 10th percentile wage.
+
+h_pct25
+  Hourly 25th percentile wage.
+
+h_median
+  Hourly median wage (50th percentile).
+
+h_pct75
+  Hourly 75th percentile wage.
+
+h_pct90
+  Hourly 90th percentile wage.
+
+a_pct10
+  Annual 10th percentile wage.
+
+a_pct25
+  Annual 25th percentile wage.
+
+a_median
+  Annual median wage (50th percentile).
+
+a_pct75
+  Annual 75th percentile wage.
+
+a_pct90
+  Annual 90th percentile wage.
+
+--------------------------------------------------------------------------------
+WAGE TYPE FLAG FIELDS
+--------------------------------------------------------------------------------
+
+annual  [ADDED: 2003]
+  Contains "TRUE" if only annual wages are released for this occupation.
+  The OES program releases only annual wages for occupations that typically
+  work fewer than 2,080 hours per year but are paid on an annual basis,
+  such as teachers, pilots, and athletes.
+
+hourly  [ADDED: 2004]
+  Contains "TRUE" if only hourly wages are released for this occupation.
+  Applies to occupations such as actors, dancers, and musicians/singers
+  that are paid hourly and generally do not work a standard 2,080-hour
+  work year.
+
+
+================================================================================
+SECTION 2: YEAR-BY-YEAR FIELD CHANGES
+================================================================================
+
+--- 2003 (28 fields) ---
+Initial release in this series. Core field set established.
+Fields present: prim_state, area, st, state, area_name, naics, naics_title,
+  occ_code, occ_title, group, tot_emp, emp_prse, pct_total, pct_rpt,
+  h_mean, a_mean, mean_prse, h_pct10, h_pct25, h_median, h_pct75, h_pct90,
+  a_pct10, a_pct25, a_median, a_pct75, a_pct90, annual
+NOT YET PRESENT: hourly, jobs_1000, ownership, loc quotient, occ_group,
+  naics_level
+
+--- 2004 (29 fields) — Change from 2003 ---
+ADDED: hourly
+  "Contains 'TRUE' if only the hourly wages are released. There is wide
+  variation in the number of hours worked by those employed as actors,
+  dancers, musicians, and singers. Many jobs are for a duration of 1 day
+  or 1 week and it is extremely rare for a performer to have guaranteed
+  employment for a period that exceeds 3 to 6 months."
+
+--- 2005 (29 fields) — No structural changes from 2004 ---
+
+--- 2006 (29 fields) — No structural changes from 2005 ---
+
+--- 2007 (29 fields) — No structural changes from 2006 ---
+
+--- 2008 (29 fields) — No structural changes from 2007 ---
+
+--- 2009 (30 fields) — Change from 2008 ---
+ADDED: jobs_1000
+  "The number of jobs (employment) in the given occupation per 1,000 jobs
+  in the given area (only on the statewide, metropolitan, and
+  nonmetropolitan statistical area files)"
+MINOR WORDING: prim_state description changed from "only on MSA file"
+  to "only on MSA files" (plural)
+
+--- 2010 (32 fields) — Changes from 2009 ---
+ADDED: ownership
+  "The ownership type (only on the ownership level files)"
+ADDED: loc quotient
+  Full definition introduced explaining the ratio of local to national
+  occupational employment share, with example. Available only on
+  statewide, metropolitan, and nonmetropolitan statistical area files.
+
+--- 2011 (32 fields) — Wording changes from 2010 ---
+No new fields added or removed.
+SIGNIFICANT WORDING UPDATES across multiple fields:
+  - area: expanded to include "metropolitan division" and
+    "OES-specific nonmetropolitan area code"
+  - area_name: broadened from "MSA name" to "Area name"
+  - prim_state: now references "nonmetropolitan files" in addition to MSA
+  - occ_code: now explicitly notes "or OES specific code"
+  - occ_title: now explicitly notes "or OES specific title"
+  - group: expanded to include value "total" for cross-occupational totals
+  - emp_prse / mean_prse: added explanatory sentence defining RSE
+  - ownership: expanded description to note that files without this field
+    represent all ownership types combined
+  - annual: added "athletes" as an example occupation; changed "2020"
+    to "2020 hour work year" in hourly (typo carried in 2011)
+  - pct_total: added note that percents may not total to 100
+
+--- 2012 (33 fields) — Changes from 2011 ---
+ADDED: occ_group (replaces group functionally, but group is also retained)
+  "Shows the SOC occupation level. 'total'=Total of all occupations;
+  'major'=SOC major group; 'minor'=SOC minor group; 'broad'=Broad SOC
+  occupation; 'detailed'=Detailed SOC occupation level"
+ADDED: naics_level
+  "Distinguishes between the 5-digit NAICS and 6-digit NAICS (only on
+  the select 5- and 6-digit industry file."
+NOTE: group field no longer listed separately; occ_group is its successor.
+
+--- 2013 (33 fields) — No structural changes from 2012 ---
+
+--- 2014 (32 fields) — Change from 2013 ---
+REMOVED: naics_level (no longer listed)
+All other fields and definitions match 2013.
+
+--- 2015 (32 fields) — Changes from 2014 ---
+RENAMED: loc quotient → loc_quotient (underscore replaces space)
+occ_code: description updated from "7-digit" to "6-digit" SOC code,
+  reflecting adoption of the 2010 SOC system. Also changed hyphenation
+  to "OES-specific".
+occ_title: updated to "OES-specific title" (hyphenated)
+occ_group: minor formatting cleanup (colons and quotes standardized)
+emp_prse / mean_prse: parenthetical "(RSE)" added inline for clarity
+pct_total: "not reported" changed to "not published separately"
+annual / hourly: "2080" changed to "2,080" (comma added); wording
+  slightly cleaned throughout
+
+--- 2016 (32 fields) — No structural changes from 2015 ---
+
+--- 2017 (32 fields) — No structural changes from 2016 ---
+
+
+================================================================================
+SECTION 3: FIELD AVAILABILITY MATRIX
+================================================================================
+Fields are listed by first year available and last year if removed.
+"All" = present in all years 2003–2017 unless otherwise noted.
+
+Field            | First Year | Last Year | Notes
+-----------------|------------|-----------|-------------------------------
+prim_state       | 2003       | 2017      | All years
+area             | 2003       | 2017      | All years
+st               | 2003       | 2017      | All years
+state            | 2003       | 2017      | All years
+area_name        | 2003       | 2017      | All years
+naics            | 2003       | 2017      | All years
+naics_title      | 2003       | 2017      | All years
+occ_code         | 2003       | 2017      | All years; 7-digit→6-digit in 2015
+occ_title        | 2003       | 2017      | All years
+group            | 2003       | 2011      | Superseded by occ_group in 2012
+tot_emp          | 2003       | 2017      | All years
+emp_prse         | 2003       | 2017      | All years
+pct_total        | 2003       | 2017      | All years
+pct_rpt          | 2003       | 2017      | All years
+h_mean           | 2003       | 2017      | All years
+a_mean           | 2003       | 2017      | All years
+mean_prse        | 2003       | 2017      | All years
+h_pct10          | 2003       | 2017      | All years
+h_pct25          | 2003       | 2017      | All years
+h_median         | 2003       | 2017      | All years
+h_pct75          | 2003       | 2017      | All years
+h_pct90          | 2003       | 2017      | All years
+a_pct10          | 2003       | 2017      | All years
+a_pct25          | 2003       | 2017      | All years
+a_median         | 2003       | 2017      | All years
+a_pct75          | 2003       | 2017      | All years
+a_pct90          | 2003       | 2017      | All years
+annual           | 2003       | 2017      | All years
+hourly           | 2004       | 2017      | Added in 2004
+jobs_1000        | 2009       | 2017      | Added in 2009
+ownership        | 2010       | 2017      | Added in 2010
+loc quotient     | 2010       | 2014      | Renamed loc_quotient in 2015
+loc_quotient     | 2015       | 2017      | Renamed from loc quotient
+occ_group        | 2012       | 2017      | Replaces group field
+naics_level      | 2012       | 2013      | Present only 2012–2013
+
+
+================================================================================
+END OF DOCUMENT
+================================================================================
