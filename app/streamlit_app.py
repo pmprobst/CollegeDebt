@@ -123,7 +123,7 @@ def main():
                 height=520,
                 margin=dict(l=40, r=40, t=40, b=40),
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, key="scatter_debt_vs_earn_2yr")
 
         st.divider()
         agg["_label"] = agg.apply(
@@ -171,11 +171,11 @@ def main():
             with bcol:
                 st.markdown("**Best 15 (lowest debt relative to earnings)**")
                 fig_b = _ratio_bars(best, "Lowest ratios")
-                st.plotly_chart(fig_b, use_container_width=True)
+                st.plotly_chart(fig_b, use_container_width=True, key="ratio_bar_best15")
             with wcol:
                 st.markdown("**Worst 15 (highest debt relative to earnings)**")
                 fig_w = _ratio_bars(worst, "Highest ratios")
-                st.plotly_chart(fig_w, use_container_width=True)
+                st.plotly_chart(fig_w, use_container_width=True, key="ratio_bar_worst15")
 
 
 def _money(x) -> str:
