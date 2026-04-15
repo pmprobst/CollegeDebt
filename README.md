@@ -1,6 +1,8 @@
 # CollegeDebt
 
-## Streamlit app (Major Explorer)
+## Streamlit app
+
+**Major Explorer** uses the most recent field-of-study file; **Trends Over Time** loads the eight pooled award-year panel CSVs (`FieldOfStudyData*_PP_slim.csv`) under `Data/IPEDS_College_Scorecard/FieldOfStudy/`.
 
 Use a virtual environment so dependencies stay isolated.
 

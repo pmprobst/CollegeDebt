@@ -80,9 +80,9 @@ def coerce_numeric(series: pd.Series) -> pd.Series:
     return pd.to_numeric(s, errors="coerce")
 
 
-def load_and_prepare(csv_path: Path | None = None) -> pd.DataFrame:
-    path = csv_path or DEFAULT_FOS_PATH
-    df = pd.read_csv(path, low_memory=False)
+def prepare_fos_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    """Normalize raw field-of-study CSV data (shared by most-recent and panel loads)."""
+    df = df.copy()
     df["CIPCODE"] = pd.to_numeric(df["CIPCODE"], errors="coerce")
     df = df.dropna(subset=["CIPCODE"])
     for col in NUMERIC_COLS:
@@ -91,9 +91,14 @@ def load_and_prepare(csv_path: Path | None = None) -> pd.DataFrame:
     df["cip_family"] = df["CIPCODE"].map(cip_family)
     df = df[df["cip_family"].notna()].copy()
     df["cred_short"] = df["CREDDESC"].map(short_credential)
-    # Restrict to Bachelor / Master / Doctoral for explorer filters
     df = df[df["CREDLEV"].isin(CREDENTIAL_FILTER_LEVELS)].copy()
     return df
+
+
+def load_and_prepare(csv_path: Path | None = None) -> pd.DataFrame:
+    path = csv_path or DEFAULT_FOS_PATH
+    df = pd.read_csv(path, low_memory=False)
+    return prepare_fos_dataframe(df)
 
 
 def family_labels(df: pd.DataFrame) -> pd.DataFrame:
